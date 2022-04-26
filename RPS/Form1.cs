@@ -23,8 +23,9 @@ namespace RPS
         }
 
         private void RPS_Load(object sender, EventArgs e)
-        { 
-
+        {
+            radrock.Checked = false;
+            imgPlayer.Image = Properties.Resources.GettyImages_871479424_f599f96e1c03466880bfc5be20aeb201;
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
@@ -42,11 +43,11 @@ namespace RPS
             if (radrock.Checked && random == 3)
                 lblMsg.Text = ("Congratulations you are the winner");
             else if (radrock.Checked && random == 2)
-                lblMsg.Text = ("Opps you are the loser");
+                lblMsg.Text = ("Oops you are the loser");
             else if (radrock.Checked && random == 1)
                 lblMsg.Text = ("Wow you got a tie");
             else if (radpaper.Checked && random == 3)
-                lblMsg.Text = ("Opps you are the loser");
+                lblMsg.Text = ("Oops you are the loser");
             else if (radpaper.Checked && random == 2)
                 lblMsg.Text = ("Wow you got a tie");
             else if (radpaper.Checked && random == 1)
@@ -56,7 +57,7 @@ namespace RPS
             else if (radscissors.Checked && random == 2)
                 lblMsg.Text = ("Congratulations you are the winner");
             else if (radscissors.Checked && random == 1)
-                lblMsg.Text = ("Opps you are the loser");
+                lblMsg.Text = ("Oops you are the loser");
             if (radrock.Checked && random == 1 || radpaper.Checked && random == 2 || radscissors.Checked && random == 3)
                 tie = tie + 1;
             else if (radrock.Checked && random == 2 || radpaper.Checked && random == 3 || radscissors.Checked && random == 1)
